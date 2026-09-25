@@ -1,4 +1,5 @@
 papers/
 __pycache__/
 *.pyc
+*.tex
 code/simulator/benchmarkResults.json
