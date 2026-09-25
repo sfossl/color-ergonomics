@@ -89,6 +89,8 @@ window.SIM_CONTENT = {
   },
 
   footer: {
+    preprintLinkText: "Preprint",
+    preprintLinkUrl: "https://doi.org/10.5281/zenodo.22967239",
     paperLinkText: "Documentation",
     paperLinkUrl: "https://github.com/sfossl/color-ergonomics#readme",
     githubLinkText: "GitHub",

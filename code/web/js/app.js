@@ -39,6 +39,11 @@
 
   var btnInvert = document.getElementById('btnInvert');
 
+  var footerPreprintLink = document.getElementById('footerPreprintLink');
+  if (footerPreprintLink && C.footer.preprintLinkText) {
+    footerPreprintLink.textContent = C.footer.preprintLinkText;
+    footerPreprintLink.href        = C.footer.preprintLinkUrl;
+  }
   var footerPaperLink = document.getElementById('footerPaperLink');
   if (footerPaperLink) {
     footerPaperLink.textContent = C.footer.paperLinkText;
