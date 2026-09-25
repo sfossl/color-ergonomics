@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invariant Color Ergonomics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <span class="header-title" id="headerTitle">Invariant Color Ergonomics</span>
+  </header>
+
+  <main class="workspace">
+
+    <aside class="control-pane">
+      <div class="control-section">
+        <div class="slider-group">
+          <div class="slider-item">
+            <div class="slider-row">
+              <span id="labelHue"></span>
+              <span class="slider-val mono" id="valH">145°</span>
+            </div>
+            <input type="range" id="inputH" min="0" max="360" step="1" value="145">
+          </div>
+          <div class="slider-item">
+            <div class="slider-row">
+              <span id="labelChroma"></span>
+              <span class="slider-val mono" id="valC">0.035</span>
+            </div>
+            <input type="range" id="inputC" min="0.000" max="0.140" step="0.005" value="0.035">
+          </div>
+          <div class="slider-item">
+            <div class="slider-row">
+              <span id="labelLightness"></span>
+              <span class="slider-val mono" id="valL">0.890</span>
+            </div>
+            <input type="range" id="inputL" min="0.250" max="0.980" step="0.005" value="0.890">
+          </div>
+        </div>
+      </div>
+
+      <div class="pane-divider"></div>
+
+      <div class="control-section">
+        <div class="vision-grid" id="visionModesGroup"></div>
+      </div>
+
+      <div class="pane-divider"></div>
+
+      <div class="control-section">
+        <div class="diag-card">
+          <div class="diag-row">
+            <span id="labelLum"></span>
+            <strong class="mono metric-val" id="diagY">0.7140</strong>
+          </div>
+          <div class="diag-row">
+            <span id="labelWcag"></span>
+            <strong class="mono metric-val" id="diagWcag">9.05 : 1</strong>
+          </div>
+          <div class="diag-row">
+            <span id="labelApca"></span>
+            <strong class="mono metric-val" id="diagApca">Lc 77.7</strong>
+          </div>
+          <div class="diag-row">
+            <span id="labelChromaRule"></span>
+            <strong class="mono metric-val" id="badgeChroma">Optimal</strong>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <section class="paper-stage">
+      <article class="paper-sheet">
+
+        <header class="paper-head">
+          <h1 class="paper-title" id="paperTitle"></h1>
+          <p class="paper-subtitle" id="paperSubtitle"></p>
+        </header>
+
+        <div class="paper-body">
+          <p id="paperIntro"></p>
+          <p id="paperHue"></p>
+          <p id="paperChroma"></p>
+          <p id="paperLightness"></p>
+
+          <div class="paper-callout" id="paperCallout"></div>
+
+          <div class="paper-components">
+            <div class="comp-left">
+              <div class="badge-row" id="spectrumRow"></div>
+            </div>
+            <div class="comp-right">
+              <button class="btn-action btn-reset" id="btnReset" type="button"></button>
+              <button class="btn-action btn-random" id="btnRandom" type="button"></button>
+              <button class="btn-action btn-invert" id="btnInvert" type="button"></button>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-links">
+      <a id="footerPaperLink" href="https://github.com/sfossl/color-ergonomics#readme" target="_blank" rel="noopener">Documentation</a>
+      <span class="footer-sep">&bull;</span>
+      <a id="footerGithubLink" href="https://github.com/sfossl/color-ergonomics" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <span id="footerCopy">Akash Sharma</span>
+  </footer>
+
+  <div class="tooltip-popover" id="tooltipPopover" role="tooltip" aria-hidden="true">
+    <div class="tooltip-title" id="tooltipTitle"></div>
+    <p class="tooltip-desc" id="tooltipDesc"></p>
+  </div>
+
+  <script src="./config/content.js"></script>
+  <script src="./js/colorMath.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
