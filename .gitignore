@@ -1,0 +1,4 @@
+papers/
+__pycache__/
+*.pyc
+code/simulator/benchmarkResults.json
