@@ -30,6 +30,9 @@ python3 -m http.server 8000 --directory code/web
 
 Calculations in this project build upon Björn Ottosson's [Oklab specification](https://bottosson.github.io/posts/oklab/), the physiological color vision deficiency simulation models of [Machado, Oliveira, and Fernandes (2009)](https://doi.org/10.1109/TVCG.2009.113), the [chromatic eye model](https://doi.org/10.1364/AO.31.003594) by Thibos et al. (1992), and the [Accessible Perceptual Contrast Algorithm (APCA)](https://github.com/Myndex/SAPC-APCA). Interface typography uses [IBM Plex Sans](https://github.com/IBM/plex) by Mike Abbink and Bold Monday under the [SIL Open Font License](https://openfontlicense.org).
 
+## Preprint
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22967239.svg)](https://doi.org/10.5281/zenodo.22967239)
+
 ## License
 
 MIT
